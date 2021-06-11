@@ -28,7 +28,7 @@ function TodosContextProvider({ children }) {
                   } else if (error.request) {
                     // The request was made but no response was received
                     console.log('whattttt', error.request);
-                    alert('Network Error : Please Check your Internet Connection !!!')
+          
                   } else {
                     // Something happened in setting up the request that triggered an Error
                     console.log('OMG WORKED', error.message);
