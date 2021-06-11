@@ -18,7 +18,7 @@ function TodosList() {
             <h3 className="mx-auto mb-4" style={{
                 color: 'HighlightText',
                 fontFamily : 'cursive'
-            }}>Welcome Your Todos are :: </h3>
+            }}>Check these todos !!! </h3>
             
             { result }
             <br />
