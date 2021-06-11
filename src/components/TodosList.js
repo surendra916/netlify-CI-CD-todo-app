@@ -19,9 +19,10 @@ function TodosList() {
                 color: 'HighlightText',
                 fontFamily : 'cursive'
             }}>Welcome Your Todos are :: </h3>
-
-            { result }
             
+            { result }
+            <br />
+            <br />
             
         </div>
     )
