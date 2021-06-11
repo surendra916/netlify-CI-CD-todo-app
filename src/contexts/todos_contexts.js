@@ -42,20 +42,23 @@ function TodosContextProvider({ children }) {
     },[])
 
     const addTodo = async (obj) => {
-
+      var old_todos = todos;
         const headers = {
             'Content-Type' : 'application/json'
         }
 
         try {
             setLoading(true);
-            const { data } = await http.post('/create',obj,headers);
+            setTodos([...todos,obj]);
+            const { status } = await http.post('/create',obj,headers);
             //console.log('response from server is ', data);
             setLoading(false);
-            setTodos([...todos, data]);
-            
+            //setTodos([...todos, data]);
+            if (status !== 200)
+                setTodos(old_todos)
         } catch (error) {
-            setLoading(false);
+          setLoading(false);
+          setTodos([]);
             if (error.response) {
                 // Request made and server responded
                 console.log(error.response.data);
