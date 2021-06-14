@@ -9,7 +9,7 @@ function TodosList() {
     const { todos,loading } = useContext(TodosContext)  
     const mappedTodos = todos && todos.map((todo,index) => <Todo key={index} todo={todo}/>)
 
-    const result = loading ? <LoadingSpinner /> : todos && todos.length > 0 ? mappedTodos : <div class="alert alert-info" role="alert">
+    const result = loading ? <LoadingSpinner /> : todos && todos.length > 0 ? mappedTodos : <div className="alert alert-info" role="alert">
     Yeahhh No todos Left !!!! 
   </div>;
 
